@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --main-bg: #2c2c2c;
+    --input-bg: #d9d9d9;
+    --button-bg: #4f4f4f;
+    --task-bg: #222222;
+    --remove-button-bg: #999999;
+    --text-color: #fff;
+}
+
+body{
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+/* 1 - блок */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
+    padding: 24px;
+}
+
+header .header-underline{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    width: 100%;
+}
+
+header h1{
+    font-family: "Racing Sans One", serif;
+    font-size: 64px;
+}
+
+header .line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--text-color);
+}
+
+header .image-edit{
+    height: 38px;
+}
+
+
+/* 2 - блок */
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin-top: 80px;
+    width: 100%;
+    padding: 0 300px;
+}
+
+.input-wrapper .line{
+    height: 1px;
+    width: 100%;
+    background-color: var(--text-color);
+}
+
+.task-input{
+    background-color: var(--input-bg);
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 50px;
+    width: 80%;
+}
+
+.task-input input{
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 0 16px;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.task-input button{
+    border: none;
+    outline: none;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    font-family: "Racing Sans One", serif;
+    font-size: 25px;
+    padding: 0 22px;
+    cursor: pointer;
+}
+
+
+/* 3 - блок */
+
+.task-list{
+    display: flex;
+    justify-content: center;
+}
+
+.task-list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    list-style: none;
+    width: 100%;
+    margin-top: 80px;
+    padding: 0 300px;
+}
+
+.task.fake {
+    opacity: 0.5;
+}
+
+.task-list .task{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: var(--task-bg);
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+    height: 38px;
+}
+
+.task p{
+    padding: 8px 18px;
+    font-size: 19px;
+}
+
+.task button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--remove-button-bg);
+    width: 38px;
+    cursor: pointer;
+}
